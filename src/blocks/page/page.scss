@@ -138,11 +138,11 @@ a {
 
   &:hover,
   &:focus {
-    color: $link-color--hover;
+    //color: $link-color--hover;
   }
 
   &:visited {
-    color: $link-color--hover;
+    //color: $link-color--hover;
   }
 
   // На больших экранах телефоны-ссылки делаем обычным текстом (если надо)
@@ -170,6 +170,14 @@ a {
 
 .fade:not(.show) {
   opacity: 0;
+}
+
+.collapse {
+  transition: all 0.3s ease-out;
+}
+
+.collapse:not(.show) {
+  display: none;
 }
 
 .visually-hidden {
@@ -215,17 +223,17 @@ a {
 .container {
   display: block;
   width: 100%;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
   background: none;
 
   @media (min-width: $screen-md) {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   @media (min-width: $screen-xl) {
-    $padding-min: 15px; // нужный отступ от краев экрана
+    $padding-min: 40px; // нужный отступ от краев экрана
     $half-screen-xl: $screen-xl / 2 - $padding-min;
     // padding: 1em calc(50% - 600px); //600px - это $screen-xl / 2 - нужный отступ от края экрана
     padding-left: calc(50% - #{$half-screen-xl});
