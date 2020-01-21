@@ -1,14 +1,10 @@
-// В этом файле должны быть стили для БЭМ-блока main-nav, его элементов,
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 $gray-lightest:               hsl(0, 0%, 90%) !default;
 
 $screen-xs:                   0 !default;
 $screen-sm:                   480px !default;
 $screen-md:                   768px !default;
 $screen-lg:                   992px !default;
-$screen-xl:                   1200px !default;
+$screen-xl:                   1280px !default;
 $screen-xxl:                  1800px !default;
 
 $menu-desktop-width:          $screen-xl !default;
@@ -18,66 +14,104 @@ $toggler-part-bg-color:       #000 !default;
 $transition-time:             0.3s !default;
 
 .main-nav {
+  display: flex;
+  flex-wrap: wrap;
+  //flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: space-between;
+  position: fixed;
+  z-index: 10;
+  top: 78px;
+  left: 0;
+  flex-basis: 100%;
+  width: 100%;
+  height: calc(100vh - 78px);
+  padding: 20px 15px;
+  background-color: $white;
+  overflow-y: auto;
+
+  @media (min-width: $screen-md) {
+    top: 102px;
+    height: calc(100vh - 102px);
+  }
+
+  @media (min-width: $menu-desktop-width) {
+    display: block !important;
+    position: static;
+    flex-basis: auto;
+    width: auto;
+    height: auto;
+    padding: 0;
+    overflow-y: hidden;
+    transform: translateY(-5px);
+  }
 
   $block-name:                &; // #{$block-name}__element
 
-  position: relative;
-  z-index: 10;
 
   // первый уровень
   &__list {
+    flex: 0 0 100%;
     margin: 0;
     padding: 0;
     list-style: none;
-
-    // мобильный вид списка
-    @media (max-width: ($menu-desktop-width - 1)) {
-
-      // открытие/закрытие меню только в случае работающего JS
-
-      .js & {
-        overflow: hidden;
-        max-height: 0;
-        transition: max-height 0.2s;
-      }
-
-      .js #{$block-name}--open & {
-        max-height: 100vh;
-        transition: max-height 0.6s;
-      }
-    }
+    border-left: 4px solid $main-color;
 
     // настольный вид списка
     @media (min-width: $menu-desktop-width) {
       display: flex;
       flex-wrap: wrap;
+      border-left: none;
     }
   }
 
   &__item {
     position: relative;
+    margin-bottom: 15px;
 
-    &--active {
+    @media (min-width: $menu-desktop-width) {
+      margin-bottom: 0;
+      margin-right: 40px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+
+      @media (min-width: $menu-desktop-width) {
+        margin-right: 0;
+      }
+    }
+
+    &--active,
+    &.active {
 
       & > #{$block-name}__link {
-        color: red;
+        color: $main-color;
+        pointer-events: none;
       }
     }
   }
 
   &__link {
     display: block;
-    padding: 0.5em;
+    padding: 0 15px;
+    font-weight: 600;
     text-decoration: none;
+    color: $title-color;
     background-color: #fff;
+
+    @media (min-width: $menu-desktop-width) {
+      padding: 0;
+    }
 
     &:hover,
     &:focus {
       text-decoration: none;
-      background-color: aquamarine;
+      color: $main-color;
     }
 
-    &--lvl-2 {
+    /* &--lvl-2 {
 
       @media (max-width: ($menu-desktop-width - 1)) {
         padding-left: 1.2em;
@@ -89,10 +123,10 @@ $transition-time:             0.3s !default;
       @media (max-width: ($menu-desktop-width - 1)) {
         padding-left: 2.4em;
       }
-    }
+    } */
   }
 
-  &__sublist-wrapper {
+  /* &__sublist-wrapper {
 
     &--lvl-2 {
 
@@ -139,17 +173,59 @@ $transition-time:             0.3s !default;
         // stylelint-enable
       }
     }
+  } */
+
+  &__info {
+    flex: 0 1 100%;
+    margin-top: 15px;
+    font-size: 12px;
+    font-weight: 500;
+    color: $text-color;
+
+    @media (min-width: $menu-desktop-width) {
+      display: none;
+    }
+
+    span {
+      display: inline-block;
+      vertical-align: baseline;
+    }
+
+    span + span {
+      margin-top: 5px;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+        color: $main-color;
+      }
+    }
   }
-
-
 
   // переключатель
 
   &__toggler {
+    box-sizing: border-box;
     display: inline-block;
-    padding: 0;
-    background: none;
+    vertical-align: middle;
+    width: 24px;
+    height: 24px;
+    margin: 0 0 0 20px;
+    padding: 2px;
+    white-space: nowrap;
+    user-select: none;
+    background-color: $white;
+    background-image: svg-load('../blocks/sprite-svg/svg/burger-icon.svg', fill=$title-color);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20px 16px;
     border: none;
+    cursor: pointer;
 
     .no-js & {
       display: none;
@@ -157,6 +233,18 @@ $transition-time:             0.3s !default;
 
     @media (min-width: $menu-desktop-width) {
       display: none;
+    }
+
+    &:hover,
+    &:focus {
+      background-image: svg-load('../blocks/sprite-svg/svg/burger-icon.svg', fill=$main-color);
+      outline: none;
+    }
+
+    &.burger--close {
+      background-image: svg-load('../blocks/sprite-svg/svg/close-icon.svg', fill=$main-color);
+      background-size: 24px;
+      outline: none;
     }
   }
 }

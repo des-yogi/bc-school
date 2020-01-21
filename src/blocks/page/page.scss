@@ -266,3 +266,50 @@ a {
 
 // background: svg-load('../blocks/phones-modal/bg-img/phone.svg', fill=$main-color, stroke=rgba(255, 255, 255, 0));
 
+.swiper-wrapper {
+  box-sizing: border-box;
+  align-items: stretch;
+}
+
+.swiper-slide {
+  box-sizing: inherit;
+  height: 100%;
+}
+
+.swiper-lazy-preloader {
+  border-color: $main-color;
+  border-top-color: rgba(255, 255, 255, 0);
+}
+
+.swiper-pagination__wrapper {
+  display: flex;
+  align-items: baseline;
+}
+
+.swiper-pagination__text {
+  margin-top: 30px;
+  margin-left: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: $main-color;
+}
+
+.swiper-pagination {
+  position: static;
+}
+
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  margin-right: 12px;
+  background-color: $main-color;
+  opacity: 0.45;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+}

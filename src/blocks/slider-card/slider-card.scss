@@ -1,0 +1,52 @@
+.slider-card {
+  display: block;
+  //height: 100%;
+  text-decoration: none;
+  background-color: $white;
+  border-bottom: 4px solid $main-color;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &:hover,
+  &:focus {
+
+    #{$block-name}__title {
+      color: $main-color;
+    }
+  }
+
+  &__img {
+
+    img {
+      display: block;
+    }
+  }
+
+  &__text {
+    padding: 20px 10px;
+    color: $text-color;
+  }
+
+  &__title {
+    height: 42px;
+    margin: 0;
+    transition: color 0.2s ease-out;
+
+    @media (min-width: $screen-md) {
+      height: 48px;
+    }
+  }
+
+  &__date {
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  &__author {
+    display: block;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+}

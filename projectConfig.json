@@ -22,7 +22,14 @@
     "table-mobile-scroll": [],
     "table-responsive": [],
     "tabs": [],
-    "typo": []
+    "typo": [],
+    "banner-slider": [],
+    "about-index": [],
+    "blog-slider": [],
+    "slider-card": [],
+    "project-index": [],
+    "supervisor-index": [],
+    "index-block": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
@@ -33,8 +40,7 @@
   "addCssAfter": [
     "./src/scss/print.scss"
   ],
-  "singleCompiled": [
-  ],
+  "singleCompiled": [],
   "addJsBefore": [
     "./node_modules/picturefill/dist/picturefill.min.js",
     "./node_modules/swiper/js/swiper.min.js",
@@ -43,8 +49,10 @@
     "./node_modules/jquery/dist/jquery.min.js",
     "./node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js",
     "./node_modules/object-fit-images/dist/ofi.js",
+    "./src/js/libs/jquery.downCount.js",
     "./src/js/libs/popper.min.js",
-    "./src/js/libs/util.min.js"
+    "./src/js/libs/util.min.js",
+    "./src/js/libs/collapse.js"
   ],
   "addJsAfter": [
     "./src/js/global-script.js"

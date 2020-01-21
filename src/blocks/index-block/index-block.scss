@@ -1,0 +1,18 @@
+.index-block {
+  padding: 20px 0 0;
+
+  @media (min-width: $screen-xl) {
+    padding-bottom: 20px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &--right-bg {
+    background-image: linear-gradient(to right, $white, $white 40%, $main-color 40%, $main-color calc(40% + 30px), $white calc(40% + 30px), $white calc(40% + 34px), $main-color calc(40% + 34px), $main-color);
+  }
+
+  &__underlined {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+}

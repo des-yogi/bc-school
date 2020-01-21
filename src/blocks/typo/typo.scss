@@ -148,6 +148,42 @@ h6 {
   font-size: $font-size--h5;
 }
 
+.h1--underlined,
+.h2--underlined {
+  position: relative;
+  display: inline-block;
+  vertical-align: baseline;
+  margin-top: 0;
+
+  @media (min-width: $screen-xl) {
+    padding: 0 40px;
+  }
+
+  &::after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 18px;
+    left: 0;
+    right: 0;
+    //z-index: -1;
+    height: 8px;
+    background-color: $main-color;
+
+    @media (min-width: $screen-md) {
+      top: 32px;
+    }
+  }
+
+  span {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.h2--underlined {
+
+}
 
 .p,
 p,
