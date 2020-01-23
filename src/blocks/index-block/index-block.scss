@@ -1,14 +1,45 @@
 .index-block {
   padding: 20px 0 0;
+  margin-bottom: 60px;
 
   @media (min-width: $screen-xl) {
     padding-bottom: 20px;
+    margin-bottom: 100px;
   }
 
   $block-name:                &; // #{$block-name}__element
 
+  .h1,
+  .h2 {
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 40px;
+    }
+  }
+
   &--right-bg {
     background-image: linear-gradient(to right, $white, $white 40%, $main-color 40%, $main-color calc(40% + 30px), $white calc(40% + 30px), $white calc(40% + 34px), $main-color calc(40% + 34px), $main-color);
+
+    @media (min-width: $screen-md) {
+      background-image: linear-gradient(to right, $white, $white calc(50% + 20px), $main-color calc(50% + 20px), $main-color calc(50% + 50px), $white calc(50% + 50px), $white calc(50% + 54px), $main-color calc(50% + 54px), $main-color);
+    }
+  }
+
+  &--left-bg {
+    color: $white;
+    background-image: linear-gradient(to right, $main-color, $main-color calc(60% - 34px), $white calc(60% - 34px), $white calc(60% - 30px), $main-color calc(60% - 30px), $main-color 60%, $white 60%, $white);
+
+    @media (min-width: $screen-md) {
+      background-image: linear-gradient(to right, $main-color, $main-color calc(50% - 54px), $white calc(50% - 54px), $white calc(50% - 50px), $main-color calc(50% - 50px), $main-color calc(50% - 20px), $white calc(50% - 20px), $white);
+    }
+
+    .h2 {
+      color: inherit;
+
+      &::after {
+        background-color: $secondary-color;
+      }
+    }
   }
 
   &__underlined {
@@ -16,3 +47,4 @@
     margin-bottom: 20px;
   }
 }
+

@@ -1,0 +1,33 @@
+.main {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__article-col {
+    @include col(xs, 12, $grid-columns, 30px);
+    @include col(xl, 8);
+    order: 1;
+
+    @media (min-width: $screen-xl) {
+      order: 0;
+    }
+  }
+
+  &__aside-col {
+    @include col(xs, 12, $grid-columns, 30px);
+    @include col(xl, 4);
+  }
+
+  &__aside-inner-col {
+    @include col(xs, 12, $grid-columns, 30px);
+    @include col(md, 6);
+    @include col(xl, 12);
+  }
+
+  &__content {
+    margin-bottom: 60px;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 100px;
+    }
+  }
+}

@@ -1,4 +1,9 @@
 .page-header {
+  margin-bottom: 20px;
+
+  @media (min-width: $screen-xl) {
+    margin-bottom: 40px;
+  }
 
   $block-name:                &; // #{$block-name}__element
 
@@ -56,6 +61,7 @@
     }
 
     @media (min-width: $screen-xl) {
+      margin-left: 40px;
       order: 1;
       transform: translateY(-6px);
     }

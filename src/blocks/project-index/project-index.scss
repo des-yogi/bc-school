@@ -1,9 +1,62 @@
-// В этом файле должны быть стили для БЭМ-блока project-index, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .project-index {
+  margin-bottom: 30px;
+
+  @media (min-width: $screen-xl) {
+    margin-bottom: 70px;
+  }
 
   $block-name:                &; // #{$block-name}__element
 
+  .h2 {
+    margin-top: 0;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 40px;
+    }
+
+    br {
+      @media (min-width: $screen-md) {
+        display: none;
+      }
+    }
+
+  }
+
+  &__col {
+    @include col(xs, 12, $grid-columns, 30px);
+    @include col(md, 6);
+    @include col(xl, 3);
+    margin-bottom: 30px;
+  }
+
+  &__item {
+    display: block;
+    height: 100%;
+    padding-bottom: 20px;
+    text-decoration: none;
+    color: $title-color;
+    background-image: linear-gradient(to left, $block-bg, $block-bg 135px, $white 135px, $white);
+
+    &:hover,
+    &:focus {
+      color: $main-color;
+    }
+
+    img {
+      display: inline-block;
+      vertical-align: top;
+      height: 96px;
+      max-height: 96px;
+    }
+
+    h4 {
+      margin-top: 20px;
+      margin-bottom: 17px;
+      color: currentColor;
+    }
+
+    p {
+      color: $text-color;
+    }
+  }
 }

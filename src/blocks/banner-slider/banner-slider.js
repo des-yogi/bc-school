@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
   var bannerSwiper = new Swiper('.banner-slider', {
-    speed: 400,
     loop: true,
+    observer: true,
     slidesPerView: 1,
     spaceBetween: 15,
     // Disable preloading of all images
@@ -18,7 +18,8 @@ document.addEventListener('DOMContentLoaded', function () {
         spaceBetween: 40,
       },
       1280: {
-        slidesPerView: 3
+        slidesPerView: 3,
+        spaceBetween: 40,
       },
     }
   });
