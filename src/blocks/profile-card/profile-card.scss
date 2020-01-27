@@ -1,0 +1,54 @@
+.profile-card {
+  background-image: linear-gradient(to left, $block-bg, $block-bg 135px, $white 135px);
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__img-col {
+    @include col(xs, 12, $grid-columns, 30px);
+    @include col(md, 6);
+    @include col(xl, 12);
+    margin-bottom: 20px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 0;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__text-col {
+    @include col(xs, 12, $grid-columns, 30px);
+    @include col(md, 6);
+    @include col(xl, 12);
+  }
+
+  &__img {
+
+    img {
+      display: block;
+    }
+  }
+
+  &__from {
+
+    div {
+      margin-bottom: 20px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    dd {
+      font-weight: 500;
+    }
+  }
+
+  &__from-title {
+    margin-top: 0 !important;
+    margin-bottom: 10px;
+    color: $main-color;
+  }
+}

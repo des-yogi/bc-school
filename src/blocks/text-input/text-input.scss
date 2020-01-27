@@ -1,12 +1,8 @@
 .text-input {
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   font-size: 16px;
   font-weight: 500;
   line-height: $line-height;
-
-  @media (min-width: $screen-lg) {
-    margin-bottom: 30px;
-  }
 
   $block-name:                &; // #{$block-name}__element
 
@@ -27,6 +23,10 @@
     border: 2px solid $border-color;
     border-radius: $border-radius;
 
+    &:hover {
+      border-color: $main-color;
+    }
+
     &:focus,
     &:not([value=""]) {
       @include field-focus;
@@ -34,7 +34,7 @@
       & + #{$block-name}__label > #{$block-name}__label-content {
         font-size: 14px;
         color: $main-color;
-        transform: translateY(-24px);
+        transform: translateY(calc(-50% - 22px));
       }
     }
 
@@ -93,8 +93,9 @@
   &__label-content {
     position: absolute;
     z-index: 5;
-    top: 12px;
+    top: 50%;
     left: 10px;
+    transform: translateY(-50%);
     z-index: 10;
     display: inline-block;
     padding: 0 10px;

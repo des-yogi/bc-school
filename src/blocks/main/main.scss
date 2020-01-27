@@ -4,23 +4,83 @@
 
   &__article-col {
     @include col(xs, 12, $grid-columns, 30px);
+    @include col(md, 12);
     @include col(xl, 8);
     order: 1;
 
     @media (min-width: $screen-xl) {
       order: 0;
     }
+
+    &--right {
+      @include col(md, 10);
+
+      @media (min-width: $screen-xl) {
+        order: 1;
+      }
+    }
   }
 
   &__aside-col {
     @include col(xs, 12, $grid-columns, 30px);
+    @include col(md, 12);
     @include col(xl, 4);
+    margin-bottom: 40px;
+
+    @media (min-width: $screen-xl) {
+      position: relative;
+      margin-bottom: 0;
+    }
+  }
+
+  &__article-content {
+
+    iframe {
+      display: inline-block;
+      vertical-align: top;
+      margin: 15px 0 20px;
+
+      @media (min-width: $screen-md) {
+        margin-top: 30px;
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  &__aside {
+
+    @media (min-width: $screen-xl) {
+      position: sticky;
+      top: 40px;
+    }
   }
 
   &__aside-inner-col {
     @include col(xs, 12, $grid-columns, 30px);
     @include col(md, 6);
     @include col(xl, 12);
+
+    &:first-child {
+      margin-bottom: 30px;
+
+      @media (min-width: $screen-md) {
+        margin-bottom: 0;
+      }
+
+      @media (min-width: $screen-xl) {
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  &__aside-inner {
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
   }
 
   &__content {
@@ -28,6 +88,102 @@
 
     @media (min-width: $screen-xl) {
       margin-bottom: 100px;
+    }
+  }
+
+  &__date-address {
+    padding: 30px 10px;
+    border-top: 2px solid $border-color;
+    border-left: 2px solid $border-color;
+    border-right: 2px solid $border-color;
+
+    @media (min-width: $screen-md) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+
+    dd {
+      font-weight: 600;
+    }
+
+    & > div {
+      margin-bottom: 20px;
+
+      &:first-child {
+
+        dd {
+          font-weight: 700;
+        }
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .h4 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      color: $main-color;
+    }
+  }
+
+  &__aside-map {
+    width: 100%;
+    height: 200px;
+
+    @media (min-width: $screen-md) {
+      height: 230px;
+    }
+
+    @media (min-width: $screen-xl) {
+      height: 180px;
+    }
+  }
+
+  &__aside-form {
+    padding: 30px 10px 20px;
+    border: 2px solid $border-color;
+
+    @media (min-width: $screen-md) {
+      flex: 1 0 auto;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-top: 40px;
+    }
+
+    .btn-submit {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__aside-form-title {
+    margin-top: 0;
+  }
+
+  .countdown__wrapper {
+    padding: 20px 10px;
+    border-left: 2px solid $border-color;
+    border-right: 2px solid $border-color;
+    border-bottom: 2px solid $border-color;
+
+    @media (min-width: $screen-md) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    h4 {
+      margin-top: 0;
+      margin-bottom: 10px;
     }
   }
 }

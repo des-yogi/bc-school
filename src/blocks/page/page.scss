@@ -132,17 +132,19 @@ img {
 }
 
 a {
+  text-decoration: none;
   color: $link-color;
   background-color: transparent;
-  transition: color 0.3s;
+  transition: color 0.3s ease-out;
 
   &:hover,
   &:focus {
-    //color: $link-color--hover;
+    text-decoration: underline;
+    color: $secondary-color;
   }
 
   &:visited {
-    //color: $link-color--hover;
+    color: $secondary-color;
   }
 
   // На больших экранах телефоны-ссылки делаем обычным текстом (если надо)
@@ -213,6 +215,13 @@ a {
   }
 }
 
+.publishedon {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: $text-color;
+}
+
 /* Кастомизируем выделение текста на сайте */
 *:not(img)::selection {
   color: $white;
@@ -256,6 +265,12 @@ a {
     $xl-grid-gutter:  $grid-gutter-width,
     $xxl-grid-gutter: $grid-gutter-width
   );
+}
+
+.col-1-2-1 {
+  @include col(xs, 12, $grid-columns, 30px);
+  @include col(md, 6);
+  @include col(xl, 12);
 }
 
 /* &__element {

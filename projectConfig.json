@@ -45,7 +45,8 @@
     "field-select": [],
     "field-text": [],
     "countdown": [],
-    "text-input": []
+    "text-input": [],
+    "profile-card": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
