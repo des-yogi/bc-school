@@ -46,7 +46,13 @@
     "field-text": [],
     "countdown": [],
     "text-input": [],
-    "profile-card": []
+    "profile-card": [],
+    "couch-filter": [],
+    "achievements-block": [],
+    "history-block": [],
+    "awards-block": [],
+    "contacts-block": [],
+    "contact-form": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

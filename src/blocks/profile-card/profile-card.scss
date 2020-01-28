@@ -1,5 +1,5 @@
 .profile-card {
-  background-image: linear-gradient(to left, $block-bg, $block-bg 135px, $white 135px);
+  background-image: linear-gradient(to left, $block-bg, $block-bg 135px, transparent 135px);
 
   $block-name:                &; // #{$block-name}__element
 

@@ -271,6 +271,26 @@ a {
   @include col(xs, 12, $grid-columns, 30px);
   @include col(md, 6);
   @include col(xl, 12);
+  margin-bottom: 30px;
+
+  @media (min-width: $screen-md) {
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: $screen-xl) {
+    margin-bottom: 20px;
+  }
+}
+
+.col-1-2-3 {
+  @include col(xs, 12, $grid-columns, 30px);
+  @include col(md, 6);
+  @include col(xl, 4);
+  margin-bottom: 30px;
+
+  @media (min-width: $screen-md) {
+    margin-bottom: 40px;
+  }
 }
 
 /* &__element {

@@ -39,6 +39,7 @@
 
     &:hover,
     &:focus {
+      text-decoration: none;
       color: $main-color;
     }
 

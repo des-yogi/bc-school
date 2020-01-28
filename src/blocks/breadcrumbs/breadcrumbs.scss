@@ -43,6 +43,7 @@ $text-color:                  hsl(0, 0%, 10%) !default;
     &:last-child {
 
       #{$block-name}__link {
+        font-weight: 600;
         text-decoration: none;
         color: $title-color;
         pointer-events: none;

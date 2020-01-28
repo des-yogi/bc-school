@@ -8,6 +8,7 @@
 
   &:hover,
   &:focus {
+    text-decoration: none;
 
     #{$block-name}__title {
       color: $main-color;
@@ -40,6 +41,11 @@
     }
   }
 
+  &__subtitle {
+    margin-top: 20px;
+    color: $main-color;
+  }
+
   &__date {
     margin-bottom: 10px;
     font-size: 14px;
@@ -51,5 +57,58 @@
     margin-top: 20px;
     font-size: 16px;
     font-weight: 500;
+  }
+
+  &__descr {
+    margin: 20px 0;
+  }
+
+  &__specialty {
+
+    span {
+      display: block;
+    }
+  }
+
+  &--blog {
+    background-image: linear-gradient(to left, $block-bg, $block-bg 135px, transparent 135px);
+    border-bottom: none;
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    #{$block-name}__title {
+      height: auto;
+
+      @media (min-width: $screen-md) {
+        height: auto;
+      }
+    }
+
+    #{$block-name}__img {
+
+      @media (min-width: $screen-md) {
+        flex-grow: 0;
+      }
+    }
+
+    #{$block-name}__text {
+
+      @media (min-width: $screen-md) {
+        flex: 1 0 auto;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    #{$block-name}__author {
+
+      @media (min-width: $screen-md) {
+        margin-top: auto;
+      }
+    }
   }
 }

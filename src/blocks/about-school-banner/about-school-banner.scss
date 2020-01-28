@@ -1,9 +1,65 @@
-// В этом файле должны быть стили для БЭМ-блока about-school-banner, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .about-school-banner {
+
+  // @media (min-width: $screen-md) {
+  //   background-image: linear-gradient(to right, $white, $white calc(50% + 20px), $main-color calc(50% + 20px), $main-color calc(50% + 50px), $white calc(50% + 50px), $white calc(50% + 54px), $main-color calc(50% + 54px), $main-color);
+  // }
 
   $block-name:                &; // #{$block-name}__element
 
+  &__col-text {
+    @include col(xs, 12, $grid-columns, 30px);
+    @include col(md, 12);
+    @include col(lg, 6);
+  }
+
+  &__col-img {
+    @include col(xs, 12, $grid-columns, 30px);
+    @include col-offset(md, 2);
+    @include col(md, 8);
+    @include col-offset(lg, 0);
+    @include col(lg, 6);
+  }
+
+  &__text {
+
+  }
+
+  &__intro {
+
+  }
+
+  &__img-wrapper {
+    position: relative;
+    padding: 20px 0;
+    background-image: linear-gradient(to right, $white, $white 40%, $main-color 40%, $main-color calc(40% + 30px), $white calc(40% + 30px), $white calc(40% + 34px), $main-color calc(40% + 34px), $main-color);
+
+    @media (min-width: $screen-md) {
+      padding: 40px 0;
+    }
+
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      right: -15px;
+      top: 0;
+      bottom: 0;
+      z-index: -1;
+      width: 20px;
+      height: 100%;
+      background-color: $main-color;
+
+      @media (min-width: $screen-md) {
+        right: -215px;
+        width: 225px;
+      }
+    }
+  }
+
+  &__img {
+
+    img {
+      display: block;
+    }
+  }
 }
