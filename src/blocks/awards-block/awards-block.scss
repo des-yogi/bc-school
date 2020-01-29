@@ -1,9 +1,80 @@
-// В этом файле должны быть стили для БЭМ-блока awards-block, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .awards-block {
 
   $block-name:                &; // #{$block-name}__element
 
+  &__item {
+    display: block;
+    height: 100%;
+    background-image: linear-gradient(to left, $block-bg, $block-bg 135px, transparent 135px);
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+
+      #{$block-name}__text h4 {
+        color: $main-color;
+      }
+
+      #{$block-name}__img-wrapper::before,
+      #{$block-name}__img-wrapper::after {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__img-wrapper {
+    position: relative;
+
+    &::before,
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      opacity: 0;
+      transition: opacity 0.2s ease-out;
+    }
+
+    &::before {
+      z-index: 1;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    &::after {
+      z-index: 2;
+      top: 0;
+      right: 0;
+      width: 32px;
+      height: 32px;
+      background-color: $main-color;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 20px;
+      background-image: svg-load('../blocks/sprite-svg/svg/lens-icon.svg', fill=$white);
+
+    }
+  }
+
+  &__img {
+
+    img {
+      display: block;
+    }
+  }
+
+  &__text {
+    padding: 20px 0;
+
+    h4 {
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: initial;
+    }
+  }
 }

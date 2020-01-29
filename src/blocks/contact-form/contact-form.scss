@@ -1,9 +1,30 @@
-// В этом файле должны быть стили для БЭМ-блока contact-form, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .contact-form {
 
+  @media (min-width: $screen-xl) {
+    padding-right: 165px;
+    background-image: linear-gradient(to right, $white, $white 50%, $main-color 50%);
+  }
+
   $block-name:                &; // #{$block-name}__element
+
+  form {
+    background-color: $white;
+
+    @media (min-width: $screen-xl) {
+      padding-right: 40px;
+    }
+  }
+
+  h4 {
+    margin-top: 0;
+  }
+
+  .field-actions {
+    margin-bottom: 20px;
+  }
+
+  .btn-submit {
+    width: 100%;
+  }
 
 }

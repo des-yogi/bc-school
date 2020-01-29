@@ -52,7 +52,8 @@
     "history-block": [],
     "awards-block": [],
     "contacts-block": [],
-    "contact-form": []
+    "contact-form": [],
+    "block-404": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

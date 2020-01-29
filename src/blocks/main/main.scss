@@ -89,6 +89,40 @@
     @media (min-width: $screen-xl) {
       margin-bottom: 100px;
     }
+
+    &--margin-min {
+      margin-bottom: 40px;
+
+      @media (min-width: $screen-md) {
+        margin-bottom: 80px;
+      }
+
+      @media (min-width: $screen-xl) {
+        margin-bottom: 60px;
+      }
+    }
+
+    &--bg {
+
+      @media (min-width: $screen-xl) {
+        background-image: linear-gradient(to right, $white, $white 60%, $main-color 60%);
+      }
+    }
+  }
+
+  &__content-col {
+    @include col(xs, 12, $grid-columns, 30px);
+    @include col(md, 6);
+    @include col(xl, 6);
+    margin-bottom: 40px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 0;
+    }
   }
 
   &__date-address {

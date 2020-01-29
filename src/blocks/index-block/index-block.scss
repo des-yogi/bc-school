@@ -23,6 +23,10 @@
     @media (min-width: $screen-md) {
       background-image: linear-gradient(to right, $white, $white calc(50% + 20px), $main-color calc(50% + 20px), $main-color calc(50% + 50px), $white calc(50% + 50px), $white calc(50% + 54px), $main-color calc(50% + 54px), $main-color);
     }
+
+    @media (min-width: $screen-xl) {
+      background-image: linear-gradient(to right, $white, $white calc(50% + 20px), $main-color calc(50% + 20px), $main-color calc(50% + 60px), $white calc(50% + 60px), $white calc(50% + 64px), $main-color calc(50% + 64px), $main-color);
+    }
   }
 
   &--left-bg {
@@ -31,6 +35,10 @@
 
     @media (min-width: $screen-md) {
       background-image: linear-gradient(to right, $main-color, $main-color calc(50% - 54px), $white calc(50% - 54px), $white calc(50% - 50px), $main-color calc(50% - 50px), $main-color calc(50% - 20px), $white calc(50% - 20px), $white);
+    }
+
+    @media (min-width: $screen-xl) {
+      background-image: linear-gradient(to right, $main-color, $main-color calc(50% - 64px), $white calc(50% - 64px), $white calc(50% - 60px), $main-color calc(50% - 60px), $main-color calc(50% - 20px), $white calc(50% - 20px), $white);
     }
 
     .h2 {
