@@ -396,7 +396,7 @@ gulp.task('html', function() {
 
 // Конкатенация и углификация Javascript
 gulp.task('js', function (callback) {
-  const uglify = require('gulp-uglify');
+  const uglify = require('gulp-uglify-es').default;// добавлен default
   const concat = require('gulp-concat');
   if(lists.js.length > 0){
     console.log('---------- Обработка JS');
