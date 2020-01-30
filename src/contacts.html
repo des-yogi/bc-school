@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Контакти</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+      @@include('blocks/page-header/page-header.html')
+
+      <main class="main" role="main">
+
+        <div class="container">
+
+          @@include('blocks/breadcrumbs/breadcrumbs.html')
+
+          <h1 class="h1  h1--underlined"><span>Контакти</span></h1>
+
+        </div>
+
+          <div class="main__content  main__content--bg">
+
+            <div class="container">
+
+              <div class="row">
+
+                <div class="main__content-col">
+
+                  <div class="contacts-block">
+
+                    <ul class="list-nostyled  contacts-block__list">
+
+                      <li class="contacts-block__item">
+                        <h4>Телефони</h4>
+                        <p><a href="tel:+380680000000">+38 (068) 000 00 00</a></p>
+                        <p><a href="tel:+380680000000">+38 (068) 000 00 00</a></p>
+                      </li>
+
+                      <li class="contacts-block__item">
+                        <h4>Пошта</h4>
+                        <p><a href="mailto:tanya.hill@example.com">tanya.hill@example.com</a></p>
+                      </li>
+
+                      <li class="contacts-block__item">
+                        <h4>Соцмережі</h4>
+
+                        <div class="socials  socials--onwhite">
+                          <ul class="list-nostyled  socials__list">
+                            <li class="socials__item">
+                              <a href="#" class="socials__link  socials__link--tg" title="Telegram"><span class="visually-hidden">Telegram</span></a>
+                            </li>
+                            <li class="socials__item">
+                              <a href="#" class="socials__link  socials__link--fb" title="Facebook"><span class="visually-hidden">Facebook</span></a>
+                            </li>
+                            <li class="socials__item">
+                              <a href="#" class="socials__link  socials__link--in" title="LinkedIn"><span class="visually-hidden">LinkedIn</span></a>
+                            </li>
+                            <li class="socials__item">
+                              <a href="#" class="socials__link  socials__link--inst" title="Instagram"><span class="visually-hidden">Instagram</span></a>
+                            </li>
+                          </ul>
+                        </div>
+
+                      </li>
+
+                    </ul>
+
+                  </div>
+
+                </div>
+
+                <div class="main__content-col">
+
+                  <div class="contact-form">
+                    <form id="" action="" method="post">
+
+                      <h4 class="">Ми завжди раді новим особам!</h4>
+
+                      <div class="text-input">
+                        <div class="text-input__wrapper">
+                          <input form="" id="input-name" class="text-input__field" type="text" name="name" value="" onblur="this.setAttribute('value', this.value);" required>
+                          <label class="text-input__label" for="input-name">
+                            <span class="text-input__label-content">Ім'я</span>
+                          </label>
+                        </div>
+                        <span class="text-input__error"></span>
+                      </div>
+
+                      <div class="text-input">
+                        <div class="text-input__wrapper">
+                          <input form="" id="input-email" class="text-input__field" type="email" name="email" value="" onblur="this.setAttribute('value', this.value);" required>
+                          <label class="text-input__label" for="input-email">
+                            <span class="text-input__label-content">E-Mail</span>
+                          </label>
+                        </div>
+                        <span class="text-input__error"></span>
+                      </div>
+
+                      <div class="text-input">
+                        <div class="text-input__wrapper">
+                          <input form="" id="input-tel" class="text-input__field" type="tel" name="tel" value="" onblur="this.setAttribute('value', this.value);" required>
+                          <label class="text-input__label" for="input-tel">
+                            <span class="text-input__label-content">Телефон</span>
+                          </label>
+                        </div>
+                        <span class="text-input__error"></span>
+                      </div>
+
+                      <div class="text-input">
+                        <div class="text-input__wrapper">
+                          <textarea form="" id="input-message" class="text-input__field  text-input__field--textarea" name="message" value="" rows="4" onblur="this.setAttribute('value', this.value);" required=""></textarea>
+                          <label class="text-input__label" for="input-message">
+                            <span class="text-input__label-content">Текст повідомлення</span>
+                          </label>
+                        </div>
+                      </div>
+
+                      <div class="field-actions">
+                        <input class="btn-submit" type="submit" name="" value="Зареєструватися">
+                      </div>
+
+                      <div class="field-checkbox">
+                        <label class="field-checkbox__name">
+                          <input id="agreement" class="field-checkbox__input" type="checkbox" checked>
+                          <span class="field-checkbox__name-text">Даю згоду на обробку персональних даних згідно з <a href="#">політикою конфіденційності</a></span>
+                        </label>
+                      </div>
+
+                    </form>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

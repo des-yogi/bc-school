@@ -24,20 +24,21 @@ $border-color:                hsl(0, 0%, 60%) !default;
   &__list {
     display: flex;
     flex-wrap: wrap;
-    margin: 0;
-    padding-left: 0;
-    list-style: none;
+    //margin: 0;
+    //padding-left: 0;
+    //list-style: none;
 
     li + li {
-      margin-left: 13px;
+      //margin-left: 13px;
 
       @media (min-width: $screen-md) {
-        margin-left: 15px;
+        //margin-left: 15px;
       }
     }
   }
 
   &__item {
+    margin: 0;
 
     &.active {
 
@@ -46,6 +47,64 @@ $border-color:                hsl(0, 0%, 60%) !default;
         background-color: $main-color;
         pointer-events: none;
       }
+    }
+
+    &--prev {
+      margin-right: 20px;
+    }
+
+    &--next {
+      margin-left: 20px;
+    }
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 34px;
+    height: 34px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    color: $text-muted;
+    background-color: $white;
+    border-radius: 50%;
+    transition: all 0.2s ease-out;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      color: $white;
+      background-color: $main-color;
+
+      svg {
+        fill: currentColor;
+      }
+    }
+
+    &--disabled,
+    &:disabled {
+      background-color: $block-bg;
+      pointer-events: none;
+
+      svg {
+        fill: $text-muted !important;
+      }
+    }
+
+    span {
+      color: inherit;
+      transform: translateY(1px);
+    }
+
+    svg {
+      display: block;
+      width: 8px;
+      height: 14px;
+      fill: $main-color;
     }
   }
 }

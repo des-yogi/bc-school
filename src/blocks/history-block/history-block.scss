@@ -1,0 +1,86 @@
+.history-block {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__header-col {
+    @include col(xs, 12, $grid-columns, 30px);
+    @include col(md, 10);
+    @include col(xl, 8);
+  }
+
+  &__header-wrapper {
+    margin-bottom: 20px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__header {
+
+    .h2 {
+      margin-top: 0;
+    }
+  }
+
+  &__list {
+    counter-reset: stageCounter;
+
+    #{$block-name}__col {
+      position: relative;
+
+      &::before {
+        display: block;
+        position: absolute;
+        top: calc(20px + 22px); // padding + top
+        left: calc(20px + 20px);
+        z-index: 100;
+        width: 32px;
+        height: 32px;
+        counter-increment: stageCounter;
+        content: counter(stageCounter)"";
+        font-family: inherit;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+        line-height: 32px;
+        color: $white;
+        background-color: $main-color;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  &__col {
+    @include col(xs, 12, $grid-columns, 30px);
+    @include col(md, 12);
+    @include col(xl, 6);
+    margin-bottom: 20px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 20px;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__item {
+    height: 100%;
+    padding: 20px;
+    background-image: linear-gradient(to left, $block-bg, $block-bg 135px, transparent 135px);
+    border-bottom: 4px solid $main-color;
+  }
+
+  &__title {
+    margin-top: 0;
+    padding-left: 72px;
+
+    span {
+      display: block;
+      font-size: 64px;
+      color: $main-color;
+    }
+  }
+}

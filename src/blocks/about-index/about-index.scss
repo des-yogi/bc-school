@@ -1,0 +1,64 @@
+.about-index {
+  margin-bottom: 60px;
+
+  @media (min-width: $screen-xl) {
+    margin-bottom: 100px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__col {
+    @include col(xs, 12, $grid-columns, 30px);
+    @include col(md, 6);
+
+    &--img {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__img-bg {
+    padding-right: 20px;
+    background-image: linear-gradient(to top, $white, $white 30px, $main-color 30px, $main-color calc(100% - 30px), $white calc(100% - 30px), $white);
+
+    @media (min-width: $screen-md) {
+      padding-right: 30px;
+      background-image: linear-gradient(to top, $white, $white 35px, $main-color 35px, $main-color calc(100% - 35px), $white calc(100% - 35px), $white);
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-right: 40px;
+      background-image: linear-gradient(to top, $white, $white 60px, $main-color 60px, $main-color calc(100% - 60px), $white calc(100% - 60px), $white);
+    }
+  }
+
+  &__img {
+
+  }
+
+  &__text {
+
+    .h2 {
+
+      @media (min-width: $screen-md) {
+        margin-top: 20px;
+      }
+
+      @media (min-width: $screen-xl) {
+        margin-top: 55px;
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  &__intro {
+    margin-bottom: 30px;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__link-wrapper {
+    text-align: right;
+  }
+}

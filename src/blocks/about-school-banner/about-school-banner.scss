@@ -1,0 +1,82 @@
+.about-school-banner {
+  margin-bottom: 60px;
+
+  @media (min-width: $screen-xl) {
+    margin-bottom: 100px;
+    background-image: linear-gradient(to right, $white, $white 70%, $main-color 70%, $main-color);
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__col-text {
+    @include col(xs, 12, $grid-columns, 30px);
+    @include col(md, 10);
+    @include col(lg, 6);
+    margin-bottom: 20px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 40px;
+    }
+
+    @media (min-width: $screen-lg) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__col-img {
+    @include col(xs, 12, $grid-columns, 30px);
+    //@include col-offset(md, 2);
+    @include col(md, 12);
+    //@include col-offset(lg, 0);
+    @include col(lg, 6);
+
+    background-image: linear-gradient(to right, $white, $white 40%, $main-color 40%, $main-color calc(40% + 30px), $white calc(40% + 30px), $white calc(40% + 34px), $main-color calc(40% + 34px), $main-color);
+
+    @media (min-width: $screen-md) {
+      background-image: linear-gradient(to right, $white, $white 36%, $main-color 36%, $main-color calc(36% + 30px), $white calc(36% + 30px), $white calc(36% + 34px), $main-color calc(36% + 34px), $main-color);
+    }
+
+    @media (min-width: $screen-lg) {
+      background-image: linear-gradient(to right, $white, $white 36%, $main-color 36%, $main-color calc(36% + 40px), $white calc(36% + 40px), $white calc(36% + 44px), $main-color calc(36% + 44px), $main-color);
+    }
+  }
+
+  &__intro {
+
+    p {
+
+      &:first-child {
+        margin-bottom: 15px;
+        font-weight: 700;
+        //font-size: $font-size--h4;
+        font-size: larger;
+
+        // @media (min-width: $screen-xl) {
+        //   font-size: $font-size--h4 * 1.111;
+        // }
+      }
+    }
+  }
+
+  &__img-wrapper {
+    position: relative;
+    padding: 20px 0;
+
+    @media (min-width: $screen-md) {
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 40px 0;
+    }
+
+    @media (min-width: $screen-lg) {
+      max-width: none;
+    }
+  }
+
+  &__img {
+
+    img {
+      display: block;
+    }
+  }
+}

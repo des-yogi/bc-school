@@ -1,0 +1,43 @@
+.article-links {
+  margin-bottom: 40px;
+
+  @media (min-width: $screen-xl) {
+    margin-bottom: 80px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__col {
+    @include col(xs, 12, $grid-columns, 30px);
+    @include col(md, 6);
+    @include col(xl, 4);
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  &__item {
+    display: block;
+    height: 100%;
+    padding: 20px 10px;
+    border: 2px solid $border-color;
+    transition: color 0.2s ease-out;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+
+      h4 {
+        color: $main-color;
+      }
+    }
+
+    @media (min-width: $screen-md) {
+      padding: 20px;
+    }
+
+    h4 {
+      margin-top: 10px;
+      margin-bottom: 0;
+    }
+  }
+}

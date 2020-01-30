@@ -1,0 +1,134 @@
+.socials {
+  margin-top: 17px;
+
+  @media (min-width: $screen-xl) {
+    margin-top: -27px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__list {
+    display: flex;
+
+    @media (min-width: $screen-md) {
+      justify-content: flex-end;
+    }
+  }
+
+  &__item {
+    margin-top: 0;
+    margin-right: 20px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    vertical-align: top;
+    width: 24px;
+    height: 24px;
+    color: $white;
+
+    &--tg,
+    &--fb,
+    &--in,
+    &--inst {
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &--tg {
+      background-size: 20px 16px;
+      background-image: svg-load('../blocks/sprite-svg/svg/telegram-icon.svg', fill=$white);
+
+      &:hover,
+      &:focus {
+        background-image: svg-load('../blocks/sprite-svg/svg/telegram-icon.svg', fill=$main-color);
+      }
+    }
+
+    &--fb {
+      background-size: 10px 20px;
+      background-image: svg-load('../blocks/sprite-svg/svg/facebook-icon.svg', fill=$white);
+
+      &:hover,
+      &:focus {
+        background-image: svg-load('../blocks/sprite-svg/svg/facebook-icon.svg', fill=$main-color);
+      }
+    }
+
+    &--in {
+      background-size: 18px;
+      background-image: svg-load('../blocks/sprite-svg/svg/linkedin-icon.svg', fill=$white);
+
+      &:hover,
+      &:focus {
+        background-image: svg-load('../blocks/sprite-svg/svg/linkedin-icon.svg', fill=$main-color);
+      }
+    }
+
+    &--inst {
+      background-size: 20px;
+      background-image: svg-load('../blocks/sprite-svg/svg/instagram-icon.svg', fill=$white);
+
+      &:hover,
+      &:focus {
+        background-image: svg-load('../blocks/sprite-svg/svg/instagram-icon.svg', fill=$main-color);
+      }
+    }
+  }
+
+  &--onwhite {
+    margin-top: 20px;
+
+    @media (min-width: $screen-xl) {
+      margin-top: 20px;
+    }
+
+    #{$block-name}__list {
+      justify-content: initial;
+    }
+
+    #{$block-name}__link {
+
+      &--tg {
+        background-image: svg-load('../blocks/sprite-svg/svg/telegram-icon.svg', fill=$title-color);
+
+        &:hover,
+        &:focus {
+          background-image: svg-load('../blocks/sprite-svg/svg/telegram-icon.svg', fill=$main-color);
+        }
+      }
+
+      &--fb {
+        background-image: svg-load('../blocks/sprite-svg/svg/facebook-icon.svg', fill=$title-color);
+
+        &:hover,
+        &:focus {
+          background-image: svg-load('../blocks/sprite-svg/svg/facebook-icon.svg', fill=$main-color);
+        }
+      }
+
+      &--in {
+        background-image: svg-load('../blocks/sprite-svg/svg/linkedin-icon.svg', fill=$title-color);
+
+        &:hover,
+        &:focus {
+          background-image: svg-load('../blocks/sprite-svg/svg/linkedin-icon.svg', fill=$main-color);
+        }
+      }
+
+    &--inst {
+      background-image: svg-load('../blocks/sprite-svg/svg/instagram-icon.svg', fill=$title-color);
+
+        &:hover,
+        &:focus {
+          background-image: svg-load('../blocks/sprite-svg/svg/instagram-icon.svg', fill=$main-color);
+        }
+      }
+    }
+  }
+}

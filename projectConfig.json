@@ -1,6 +1,5 @@
 {
   "blocks": {
-    "accordion": [],
     "breadcrumbs": [],
     "btn": [],
     "burger": [],
@@ -8,9 +7,7 @@
     "dropdown": [],
     "embed-responsive": [],
     "form": [],
-    "is-mobile": [],
     "lang-switcher": [],
-    "loader": [],
     "logo": [],
     "main-nav": [],
     "modal": [],
@@ -19,36 +16,67 @@
     "page-footer": [],
     "page-header": [],
     "pagination": [],
-    "pie-chart": [],
     "scroll-link": [],
-    "sprite-png": [
-      "__demo"
-    ],
     "sprite-svg": [],
     "table": [],
     "table-mobile-scroll": [],
     "table-responsive": [],
     "tabs": [],
-    "to-top": [],
-    "typo": []
+    "typo": [],
+    "banner-slider": [],
+    "about-index": [],
+    "blog-slider": [],
+    "slider-card": [],
+    "project-index": [],
+    "supervisor-index": [],
+    "index-block": [],
+    "socials": [],
+    "main": [],
+    "aside-map": [],
+    "aside-form": [],
+    "aside-profile": [],
+    "article-links": [],
+    "supervisers-card": [],
+    "blog-card": [],
+    "couches-card": [],
+    "about-school-banner": [],
+    "field-actions": [],
+    "field-checkbox": [],
+    "field-select": [],
+    "field-text": [],
+    "countdown": [],
+    "text-input": [],
+    "profile-card": [],
+    "couch-filter": [],
+    "achievements-block": [],
+    "history-block": [],
+    "awards-block": [],
+    "contacts-block": [],
+    "contact-form": [],
+    "block-404": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
-    "./src/scss/mixins.scss"
+    "./src/scss/mixins.scss",
+    "../../node_modules/swiper/css/swiper.min.css",
+    "../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css"
   ],
   "addCssAfter": [
     "./src/scss/print.scss"
   ],
-  "singleCompiled": [
-  ],
+  "singleCompiled": [],
   "addJsBefore": [
     "./node_modules/picturefill/dist/picturefill.min.js",
+    "./node_modules/swiper/js/swiper.min.js",
     "./node_modules/blazy/blazy.min.js",
     "./node_modules/svg4everybody/dist/svg4everybody.js",
     "./node_modules/jquery/dist/jquery.min.js",
+    "./node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js",
     "./node_modules/object-fit-images/dist/ofi.js",
+    "./src/js/libs/jquery.downCount.js",
     "./src/js/libs/popper.min.js",
-    "./src/js/libs/util.min.js"
+    "./src/js/libs/util.min.js",
+    "./src/js/libs/collapse.js"
   ],
   "addJsAfter": [
     "./src/js/global-script.js"
@@ -57,9 +85,7 @@
     "./src/img/*.{jpg,jpeg,gif,png,svg,ico,webp}"
   ],
   "copiedCss": [],
-  "copiedJs": [
-
-  ],
+  "copiedJs": [],
   "dirs": {
     "srcPath": "./src/",
     "buildPath": "./build/",

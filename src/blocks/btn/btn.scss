@@ -1,37 +1,69 @@
-// В этом файле должны быть стили для БЭМ-блока btn, его элементов,
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .btn {
 
   $block-name:                &; // #{$block-name}__element
 
   box-sizing: border-box;
   display: inline-block;
+  min-width: 180px;
   margin: 0;
-  // padding: $field-padding-vertical  $field-padding-horizontal;
   white-space: nowrap;
   vertical-align: middle;
   user-select: none;
   text-align: center;
-  font-size: 1em;
+  font-size: 16px;
+  font-weight: 700;
   font-family: inherit;
-  line-height: $line-height;
+  line-height: 1;
   text-decoration: none;
   text-transform: none;
-  color: $text-color;
+  color: $title-color;
   border-radius: $border-radius;
-  border: 1px solid $gray-lighter;
-  background-color: $gray-lightest;
+  //border: 1px solid $gray-lighter;
+  background-color: rgba(255, 255, 255, 0);
   background-image: none;
   cursor: pointer;
+
+  span {
+    display: block;
+    position: relative;
+    padding: 12px 12px;
+
+    @media (min-width: $screen-md) {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 21px;
+      bottom: 15px;
+      left: 0;
+      right: 0;
+      z-index: -1;
+      background-color: $main-color;
+      transition: all 0.2s ease-out;
+    }
+  }
 
   &:hover,
   &:focus {
     text-decoration: none;
-    color: $text-color;
-    // background-color: darken($gray-lightest, 10%);
-    // border-color: darken($gray-lighter, 12%);
+    color: $white;
+
+    span {
+
+      &::after {
+        top: 0;
+        bottom: 0;
+      }
+    }
   }
 
   &:active,
@@ -41,41 +73,104 @@
 
   &--disabled,
   &:disabled {
-    // opacity: $opacity;
+    color: $secondary-color;
     cursor: not-allowed;
-    color: $text-color;
-    background-color: $gray-lightest;
-    border-color: $gray-lighter;
+
+    span {
+
+      &::after {
+        top: 0;
+        bottom: 0;
+        opacity: 0.45;
+      }
+    }
 
     @at-root a.btn--disabled {
       pointer-events: none;
     }
   }
 
-  // &__icon {
-  //   display: inline-block;
-  //   vertical-align: middle;
-  // }
+  &--main {
+    color: $main-color;
+    background-color: $white;
+    border: 2px solid $main-color;
+    transition: all 0.2s ease-out;
 
+    span {
+      padding-top: 10px;
+      padding-bottom: 10px;
 
+      &::after {
+        display: none !important;
+      }
+    }
 
-  // &--main {
-  //   color: #fff;
-  //   background-color: $color-main;
-  //   border: 1px solid $color-main;
+    &:hover,
+    &:focus {
+      color: $white;
+      background-color: $main-color;
+    }
 
-  //   &:hover,
-  //   &:focus {
-  //     color: #fff;
-  //     background-color: darken($color-main, 10%);
-  //     border-color: darken($color-main, 12%);
-  //   }
+    &--disabled,
+    &:disabled {
+      color: $secondary-color;
+      background-color: rgba(91, 160, 96, 0.45);
+      border-color: rgba(255, 255,255, 0);
+      cursor: not-allowed;
 
-  //   &--disabled,
-  //   &:disabled {
-  //     color: #fff;
-  //     background-color: $color-main;
-  //     border-color: $color-main;
-  //   }
-  // }
+      @at-root a.btn--main--disabled {
+        pointer-events: none;
+      }
+    }
+  }
+}
+
+.btn-submit {
+  box-sizing: border-box;
+  display: inline-block;
+  min-width: 180px;
+  margin: 0;
+  padding: 10px 12px;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: inherit;
+  line-height: 1;
+  text-decoration: none;
+  text-transform: none;
+  color: $main-color;
+  border-radius: $border-radius;
+  border: 2px solid $main-color;
+  background-color: rgba(255, 255, 255, 0);
+  background-image: none;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+
+  @media (min-width: $screen-md) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @media (min-width: $screen-xl) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  &:hover,
+  &:focus {
+    color: $white;
+    background-color: $main-color;
+  }
+
+  &--disabled,
+  &:disabled {
+    color: $secondary-color;
+    background-color: rgba(91, 160, 96, 0.45);
+    border-color: rgba(255, 255,255, 0);
+    cursor: not-allowed;
+    pointer-events: none;
+  }
 }

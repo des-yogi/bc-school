@@ -1,0 +1,101 @@
+.supervisers-card {
+  background-image: linear-gradient(to left, $block-bg, $block-bg 135px, transparent 135px);
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__img-col {
+    @include col(xs, 12, $grid-columns, 30px);
+    @include col(md, 12);
+    @include col(xl, 4);
+  }
+
+  &__text-col {
+    @include col(xs, 12, $grid-columns, 30px);
+    @include col(md, 12);
+    @include col(xl, 8);
+  }
+
+  &__content {
+    padding: 20px 10px;
+
+    @media (min-width: $screen-md) {
+      padding: 20px;
+    }
+  }
+
+  &__img {
+
+    img {
+      display: block;
+    }
+  }
+
+  &__title-wrapper {
+
+    @media (min-width: $screen-xl) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .socials {
+
+      @media (min-width: $screen-xl) {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__text {
+
+  }
+
+  &__text-inner-col {
+    @include col(xs, 12, $grid-columns, 30px);
+    @include col(md, 12);
+    @include col(xl, 6);
+
+    @media (min-width: $screen-xl) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__speciality {
+    font-weight: 500;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: auto;
+    }
+
+    span {
+      display: block;
+    }
+  }
+
+  &__subtitle {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: $main-color;
+  }
+
+  &__btn-wrapper {
+    position: relative;
+    z-index: 1;
+    margin-top: 20px;
+    text-align: right;
+
+    @media (min-width: $screen-xl) {
+      margin-top: 70px;
+    }
+  }
+}
