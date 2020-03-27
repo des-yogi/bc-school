@@ -376,3 +376,11 @@ a {
 .swiper-pagination-bullet-active {
   opacity: 1;
 }
+
+.swiper-slide {
+  height: auto;
+
+  & > * {
+    height: 100%;
+  }
+}
