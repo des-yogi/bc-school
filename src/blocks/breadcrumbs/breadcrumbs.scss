@@ -23,8 +23,9 @@ $text-color:                  hsl(0, 0%, 10%) !default;
     display: inline-block;
     vertical-align: baseline;
     max-width: 100%;
+    margin-top: 0;
     margin-right: 0.6em;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.4em;
     overflow: hidden;
     text-overflow: ellipsis;
 
