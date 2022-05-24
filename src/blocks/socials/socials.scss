@@ -34,7 +34,8 @@
     &--tg,
     &--fb,
     &--in,
-    &--inst {
+    &--inst,
+    &--ytb {
       background-color: transparent;
       background-repeat: no-repeat;
       background-position: center;
@@ -79,6 +80,16 @@
         background-image: svg-load('../blocks/sprite-svg/svg/instagram-icon.svg', fill=$main-color);
       }
     }
+
+    &--ytb {
+      background-size: 20px 16px;
+      background-image: svg-load('../blocks/sprite-svg/svg/youtube-icon.svg', fill=$white);
+
+      &:hover,
+      &:focus {
+        background-image: svg-load('../blocks/sprite-svg/svg/youtube-icon.svg', fill=$main-color);
+      }
+    }
   }
 
   &--onwhite {
@@ -121,12 +132,22 @@
         }
       }
 
-    &--inst {
-      background-image: svg-load('../blocks/sprite-svg/svg/instagram-icon.svg', fill=$title-color);
+      &--inst {
+        background-image: svg-load('../blocks/sprite-svg/svg/instagram-icon.svg', fill=$title-color);
 
         &:hover,
         &:focus {
           background-image: svg-load('../blocks/sprite-svg/svg/instagram-icon.svg', fill=$main-color);
+        }
+      }
+
+      &--ytb {
+        background-size: 20px 16px;
+        background-image: svg-load('../blocks/sprite-svg/svg/youtube-icon.svg', fill=$title-color);
+
+        &:hover,
+        &:focus {
+          background-image: svg-load('../blocks/sprite-svg/svg/youtube-icon.svg', fill=$main-color);
         }
       }
     }

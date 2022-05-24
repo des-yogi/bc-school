@@ -34,7 +34,7 @@ $line-height:                 1.375em !default;
     font-size: 14px;
     color: inherit;
 
-    &:before {
+    &::before {
       content: '';
       position: absolute;
       top: 1px;
@@ -45,21 +45,21 @@ $line-height:                 1.375em !default;
       border-radius: $border-radius;
     }
 
-    @at-root input:hover ~ &:before {
+    @at-root input:hover ~ &::before {
       border-color: $main-color;
     }
 
-    @at-root input:focus ~ &:before {
+    @at-root input:focus ~ &::before {
       @include field-focus;
       border-color: $main-color;
     }
 
-    @at-root input:checked ~ &:before {
+    @at-root input:checked ~ &::before {
       background-color: $main-color;
       border-color: $main-color;
     }
 
-    &:after {
+    &::after {
       content: '';
       position: absolute;
       z-index: 1;
